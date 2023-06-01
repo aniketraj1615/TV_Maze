@@ -42,7 +42,7 @@ export default function Input() {
   return (
     <>
       <section className="services" id="services">
-        <h2>Register Here</h2>
+        <h2>Book Tickets</h2>
         <div className="services-container" style={styles.main}>
           <div className="services-box">
             <div className="container my-4 rounded">
