@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TV_Maze/static/css/main.2efee0c1.css",
+    "main.js": "/TV_Maze/static/js/main.400a5eb5.js",
+    "index.html": "/TV_Maze/index.html",
+    "main.2efee0c1.css.map": "/TV_Maze/static/css/main.2efee0c1.css.map",
+    "main.400a5eb5.js.map": "/TV_Maze/static/js/main.400a5eb5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2efee0c1.css",
+    "static/js/main.400a5eb5.js"
+  ]
+}
