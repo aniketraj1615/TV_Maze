@@ -1,5 +1,8 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+import Input from "./Input";
+
 export default function ShowResults(props) {
   if (props.error !== null) {
     return (
@@ -24,29 +27,41 @@ export default function ShowResults(props) {
     } else {
       var listItem = props.data.map((element) => {
         return (
-          <li key={element.show.id} className="list-item">
-            <div className="link-container">
-              <a href={element.show.url} className="link">
-                {element.show.name}
-              </a>
-            </div>
-            <div className="link-container">
-              <a href={element.show.url} className="link">
-                <h1>Aniket</h1>
-              </a>
-            </div>
+          <div
+            className="card list-item"
+            key={element.show.id}
+            style={{ width: "auto" }}
+          >
+            <img
+              src={element.show.image.medium}
+              className="card-img-top"
+              alt="..."
+            />
+            <div className="card-body">
+              <span
+                className="position-absolute top-0  translate-middle badge rounded-pill bg-danger"
+                style={{ left: "90%", zIndex: "1" }}
+              >
+                <span class="visually-hidden">unread messages</span>
+              </span>
 
-            <div>
-              {element.show.image ? (
-                <img src={element.show.image.medium} alt={element.show.name} />
-              ) : (
-                <div className="missing-img-div">
-                  <img src="" />
-                  <h1>no photo available</h1>
-                </div>
-              )}
+              <p className="fs-4">{element.show.name}</p>
+              <hr />
+
+              <p className="card-text">{element.show.summary}...</p>
+
+              <a
+                href={element.show.url}
+                target="_blank"
+                className="btn btn-primary my-3 "
+              >
+                Read More
+              </a>
+              <a href="/Input" target="_blank" className="btn btn-primary ">
+                Book Ticket
+              </a>
             </div>
-          </li>
+          </div>
         );
       });
     }
