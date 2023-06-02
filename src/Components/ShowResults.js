@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import Input from "./Input";
+import "./ShowResults.css";
 
 export default function ShowResults(props) {
   if (props.error !== null) {
@@ -12,12 +13,12 @@ export default function ShowResults(props) {
     );
   }
   if (props.data === null) {
-    return <h1>Loading...</h1>;
+    return <h1 className="gradient-custom">Loading...</h1>;
   }
   if (props.data !== null && props.error === null) {
     if (props.data.length === 0) {
       return (
-        <div className="no-results-search">
+        <div className="no-results-search ">
           <h1>
             We couldn't find anything that matches your search. Maybe try
             something else?
@@ -28,7 +29,7 @@ export default function ShowResults(props) {
       var listItem = props.data.map((element) => {
         return (
           <div
-            className="card list-item"
+            className="card list-item gradient-custom"
             key={element.show.id}
             style={{ width: "auto" }}
           >
@@ -57,7 +58,7 @@ export default function ShowResults(props) {
               >
                 Read More
               </a>
-              <a href="/Input" target="_blank" className="btn btn-primary ">
+              <a href="/Input" className="btn btn-primary ">
                 Book Ticket
               </a>
             </div>

@@ -16,7 +16,6 @@ export default function App() {
           <Route exact path="/Input" element={<Input />} />
         </Routes>
       </BrowserRouter>
-      {/* <UserInput /> */}
     </>
   );
 }

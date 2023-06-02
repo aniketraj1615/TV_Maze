@@ -59,3 +59,21 @@ section {
     padding-left: 15rem;
   }
 }
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #01105b;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(1, 16, 91, 0.96),
+    rgba(126, 68, 85, 0.96)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(1, 16, 91, 0.7),
+    rgba(126, 68, 85, 0.7)
+  );
+}

@@ -41,7 +41,7 @@ export default function Input() {
 
   return (
     <>
-      <section className="services" id="services">
+      <section className="services gradient-custom" id="services">
         <h2>Book Tickets</h2>
         <div className="services-container" style={styles.main}>
           <div className="services-box">
